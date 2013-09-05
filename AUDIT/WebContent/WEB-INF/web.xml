@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>audit</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+<!-- Kohei - San Implemented Manager planning to assign Auditor for Advertisement Audit-->
+  <servlet>
+    <description></description>
+    <display-name>AssignAuditerServlet</display-name>
+    <servlet-name>AssignAuditerServlet</servlet-name>
+    <servlet-class>jp.co.hiroshimaj2p.audit.servlet.AssignAuditerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AssignAuditerServlet</servlet-name>
+    <url-pattern>/AssignAuditerServlet</url-pattern>
+  </servlet-mapping>
+<!-- Kenji - San Implemented Auditor report after audit completion-->  
+  <servlet>
+    <description></description>
+    <display-name>AuditorReportingServlet</display-name>
+    <servlet-name>AuditorReportingServlet</servlet-name>
+    <servlet-class>jp.co.hiroshimaj2p.audit.servlet.AuditorReportingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuditorReportingServlet</servlet-name>
+    <url-pattern>/AuditorReportingServlet</url-pattern>
+  </servlet-mapping>
+ 
+<!-- Misono - San Implemented Corporate Search View request handler--> 
+  <servlet>
+    <description></description>
+    <display-name>CorporateAgencyServlet</display-name>
+    <servlet-name>CorporateAgencyServlet</servlet-name>
+    <servlet-class>jp.co.hiroshimaj2p.audit.servlet.CorporateAgencyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CorporateAgencyServlet</servlet-name>
+    <url-pattern>/CorporateAgencyServlet</url-pattern>
+  </servlet-mapping>
+
+<!-- KWON - San Implemented Advertisement Add Form servlet-->
+  <servlet>
+    <description></description>
+    <display-name>ADAddF</display-name>
+    <servlet-name>ADAddF</servlet-name>
+    <servlet-class>jp.co.hiroshimaj2p.audit.servlet.ADAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ADAddF</servlet-name>
+    <url-pattern>/ADAddF</url-pattern>
+  </servlet-mapping>
+
+<!-- Misono - San Implemented Manager Search View request handler-->
+  <servlet>
+    <description></description>
+    <display-name>ManagerServlet</display-name>
+    <servlet-name>ManagerServlet</servlet-name>
+    <servlet-class>jp.co.hiroshimaj2p.audit.servlet.ManagerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ManagerServlet</servlet-name>
+    <url-pattern>/ManagerServlet</url-pattern>
+  </servlet-mapping>
+<!-- Kohei - San Implemented Auditor daily plan View request handler-->
+  <servlet>
+    <description></description>
+    <display-name>AuditorView</display-name>
+    <servlet-name>AuditorViewHTMLPage</servlet-name>
+    <servlet-class>jp.co.hiroshimaj2p.audit.servlet.AuditorViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuditorViewHTMLPage</servlet-name>
+    <url-pattern>/AuditorView</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginServlet</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>jp.co.hiroshimaj2p.audit.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+
+
+
+
+
+</web-app>

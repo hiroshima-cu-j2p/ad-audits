@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Manager Screen</title>
+<style type="text/css">
+body {
+    color: #494234;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 12px;
+    line-height: 1.5em;
+}
+
+.textdata {
+	padding: 0;
+    text-align: justify;
+}
+
+
+th, .lbltxt {
+    /*border-bottom: 2px solid #494234;*/
+    color: #494234;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: normal;
+    margin: 0 0 15px;
+    padding: 2px 0 10px;
+}
+
+th {
+	font-size: 18px;
+	border-bottom: 2px solid #494234;
+}
+#header {
+font-size: 24px;
+height: 50px;
+width: 100%;
+}
+#menu{
+font-size: 18px;
+height: 30px;
+width: 100%;
+text-align: right;
+background-color: #c6c6c6;
+}
+a {
+    font-style: normal;
+    text-decoration: underline;
+}
+a:link, a:visited {
+	color: blue;/*#191815;*/
+    font-style: italic;
+    font-weight: normal;
+    text-decoration: none;
+}
+table {
+width: 100%;
+margin: 3px;
+border: 0px;
+}
+
+table.search {
+Width: 60%;
+margin: 5px Auto;
+}
+.search th, .lbltxt {
+    color: #494234;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: normal;
+    margin: 0 0 15px;
+    padding: 2px 0 10px;
+}
+
+.search th {
+	font-size: 18px;
+	border-bottom: 2px solid #494234;
+}
+
+table.list {
+Width: 100%;
+margin: 0 auto;
+border: 0px;
+padding: 0px;
+border-collapse: collapse;
+}
+
+.even {
+background-color: #e5e5e5;
+border-color: #e5e5e5;
+}
+</style>
+</head>
+<body>
+<div id="header">Manager Screen</div>
+<div id="menu">&nbsp;</div>
+
+	<div id="content">
+	<form>
+		<table class="search">
+			<tr>
+				<th colspan="4">Search</th>
+			</tr>
+			<tr>
+					<td>Product name:</td>
+					<td><input type="text" name="product_name"></td>
+					<td>Location:</td>
+					<td><input type="text" name="location"></td>
+			</tr>
+			<tr>
+				<td>Corporate:</td>
+				<td>
+					<select name="corporate">
+						<option value="1">Sony</option>
+						<option value="2">Panasonic</option>
+					</select>
+				</td>
+				<td>Agency:</td>
+				<td>
+					<select name="agency">
+						<option value="1">Dentsuu</option>
+						<option value="2">Hakuoudou</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Status:</td>
+				<td>
+					<select name="status">
+						<option value="1">Resistered</option>
+						<option value="2">Assigned</option>
+					</select>
+				</td>
+				<td align="right">
+					<input type="submit" value="Search">
+				</td>
+				
+			</tr>
+		</table>
+	</form>
+
+		<table class="list">
+			<tr>
+				<th>Location</th>
+				<th>Company</th>
+				<th>Agency</th>
+				<th>Product</th>
+				<th>Auditor (Assignment Date)</th>
+				<th>&nbsp;</th>
+			</tr>
+			<tr class="lbltxt odd">
+				<td>Shinjuku Station</td>
+				<td>Panasonic</td>
+				<td>Dentsuu</td>
+				<td>Viera LED TV</td>
+				<td>Rohit (24-Aug-2013)</td>
+				<td rowspan="3"><a href="">Assign</a>
+				</td>
+			</tr>
+			<tr class="odd">
+				<td colspan="5">*An electronic display advertisement with size
+					25ft x 18ft. This advertisement is placed above FOB in front of
+					EAST exit.</td>
+			</tr>
+			<tr class="odd">
+				<td colspan="5">(10:40) : Fine.</td>
+			</tr>
+			<tr class="lbltxt even">
+				<td>Shinagawa Station</td>
+				<td>Sony</td>
+				<td>Dentsuu</td>
+				<td>VAIO Duo 13</td>
+				<td>Unassigned</td>
+				<td rowspan="3"><a href="">Assign</a>
+				</td>
+			</tr>
+			<tr class="even">
+				<td colspan="5">*A printed advertisement with size
+					400ft x 60ft. This advertisement is placed on the wall near
+					NORTH exit.</td>
+			</tr>
+			<tr class="even">
+				<td colspan="5">-</td>
+			</tr>		</table>
+
+	</div>
+	<div id="menu">
+	</div>
+
+</body>
+</html>
